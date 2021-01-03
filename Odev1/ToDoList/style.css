@@ -1,0 +1,24 @@
+        body {
+            background-image: url('todolist.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .container {
+            margin-top: 60px;
+        }
+        hr {
+            height: 2px;
+            border-width: 0;
+            color: gray;
+            background-color: gray
+        }
+        .input-group {
+            margin-top: 30px
+        }
+        .form-control {
+            border-color: black
+        }
+        table {
+            margin-top: 30px
+        }

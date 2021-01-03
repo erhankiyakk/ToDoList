@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Odev1.Models.ToDo>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>To Do View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+    <link href="~/ToDoList/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h3>To Do List</h3>
+        <hr>
+        <div class="input-group">
+            <input type="text" class="form-control" id="addToList" maxlength="120" placeholder="Enter To Do...">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="submit" id="addButton">Add</button>
+            </div>
+        </div>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th class="col">@Html.DisplayNameFor(m => m.MyTask)</th>
+                    <th class="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="myTask">
+                @foreach (var task in Model)
+                {
+                    <tr>
+                        <td class="col">@task.MyTask</td>
+                        <td class="col"><button class="btn btn-light"><i class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/ToDoList/myjquery.js"></script>
+
+</body>
+</html>
+
